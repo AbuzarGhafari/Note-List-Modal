@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Note Modal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="note-list">
+
+        <div class="header">
+
+            <div class="flex">
+                <h3>Note List</h3>
+                <a href="#" onclick="addNewNote();">+ Add Note</a>
+            </div>
+
+        </div>
+
+        <div class="line"></div>
+        
+        <div class="body" id="note-body">
+
+            <!-- Note Item Start -->
+            <!-- <div class="note-item">
+
+                <div class="flex">
+
+                    <h4>Project Illustrator Design</h4>
+
+                    <div class="menu-content">
+
+                        <div class="icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="menu">
+                            <a href="#" data-attr="edit">Edit</a>
+                            <a href="#" data-attr="completed">Completed</a>
+                            <a href="#" data-attr="delete">Delete</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <p class="date">Added on 02/01/2021</p>
+                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non assumenda unde quo numquam consequuntur expedita magnam minima possimus amet odit.</p>
+                <div class="badges">
+                    <div class="badge">Billing</div>
+                    <div class="badge">Verification</div>
+                </div>
+
+                <div class="status">
+                    <div class="danger" data-attr="danger"></div>
+                    <div class="warning" data-attr="warning"></div>
+                    <div class="success" data-attr="success"></div>
+                    <div class="normal selected" data-attr="normal"></div>
+                </div>
+
+            </div>             -->
+            <!-- Note Item End -->
+ 
+
+        </div>
+
+    </div>
+
+
+
+    <div class="add-note-modal" id="add-note-modal">
+        <div class="modal">
+            <div class="header">
+                <div class="flex">
+                    <h3>Add Note</h3>
+                    <button class="close-btn" onclick="closeModal();">&times;</button>
+                </div>
+            </div>
+            <div class="body">
+                <form>    
+                    <div class="flex">
+
+                        <div class="left-side">
+                            <p>Note Title</p>
+                            <input type="text" id="title">
+                            <p>Note</p>
+                            <textarea name="" id="noteDesc" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="right-side">
+                            <p>Select Tag</p>
+                            <div> 
+                                <input type="checkbox" name="tags" id="tag1" value="Verification">
+                                <label for="tag1">Verification</label>
+                            </div>
+
+                            <div> 
+                                <input type="checkbox" name="tags" id="tag2" value="Billing">
+                                <label for="tag2">Billing</label>
+                            </div>
+
+                            <div> 
+                                <input type="checkbox" name="tags" id="tag3" value="Necessary">
+                                <label for="tag3">Necessary</label>
+                            </div>
+
+                            <div>  
+                                <input type="checkbox" name="tags" id="tag4" value="Documents">
+                                <label for="tag4">Documents</label>
+                            </div>
+
+                            <div> 
+                                <input type="checkbox" name="tags" id="tag5" value="Declaration">
+                                <label for="tag5">Declaration</label>
+                            </div>
+
+                            <div> 
+                                <input type="checkbox" name="tags" id="tag6" value="Change Sheet">
+                                <label for="tag6">Change Sheet</label>
+                            </div>
+
+                            <div> 
+                                <input type="checkbox" name="tags" id="tag7" value="Follow Up">
+                                <label for="tag7">Follow Up</label>
+                            </div>
+
+                            <div> 
+                                <input type="checkbox" name="tags" id="tag8" value="Hold">
+                                <label for="tag8">Hold</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="status">
+                        <p>Select Status</p>
+                        <div class="danger st" data-attr="danger"></div>
+                        <div class="warning st" data-attr="warning"></div>
+                        <div class="success st" data-attr="success"></div>
+                        <div class="normal st selected" data-attr="normal"></div>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="footer">
+                <button class="btn cancel-btn" onclick="closeModal();">Cancel</button>
+                <button class="btn save-btn" id="savebtn" onclick="saveNote();">Save</button>
+                <button class="btn save-btn" id="editbtn" onclick="saveEditNote();">Save Edit</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="alert" id="alert-dialog-box">
+        <p class="msg">alert msg</p>
+        <button class="close" onclick="hideAlert();">&times;</button>
+    </div>
+
+    <div class="notification" id="notification-box">        
+        <p class="msg">notification msg</p>
+        <button class="close" onclick="hideNotification();">&times;</button>
+    </div>
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
